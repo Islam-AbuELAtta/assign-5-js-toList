@@ -1,37 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Yummy</title>
 </head>
-<body>
-    
-    <div class="container bg-primary w-50 vh-100">
-            <div class="row">
-                <div class="todo-instructure p-3 d-flex justify-content-between">
-                        <input placeholder="write your task" type="text" class="form-control w-75">
-                        <button class="btn btn-sm btn-dark" id="addToDO">Add Todo</button>
-                    </div>
-                    <h2 class="">My To Do List</h2>
 
-
-                    <div id="yoyo">
-                        <!-- <div class="d-flex justify-content-center align-content-center">
-                            <p class=" fs-5 mb-0 fw-medium me-4" >Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                            <div class=" fs-5">
-                                <i class="fa-solid fa-trash-alt text-danger me-2" onclick='deleteToDO("id")'></i>
-                                <i class="fa-solid fa-edit text-warning"></i>
-                            </div>
-                        </div> -->
-                    </div>
-            </div>
+<body class=" p-5 position-relative bg-black">
+    <div class="loader-container  position-fixed top-0 start-0 bottom-0 end-0 d-flex justify-content-center align-items-center">
+        <div class="loader"></div>
     </div>
+    <section class="side-nav position-absolute text-white" id="side-bar">
+        <div class="main-nav bg-info position-fixed top-0 bottom-0 d-flex">
+            <div class="side-links-container  d-flex" id="SLider-content">
+                <div class="Side-links bg-black py-3 px-2 d-flex flex-column justify-content-between ">
+                    <ul class="list-unstyled fs-3 text-white " role="button">
+                        <li class="p-1" id="pageSearch">
+                            search
+                        </li>
+                        <li class="p-1" id="pageCategories">
+                            Categories
+                        </li>
+                        <li class="p-1"  id="pageArea">
+                            Area
+                        </li>
+                        <li class="p-1"  id="pageIngredients">
+                            Ingredients
+                        </li>
+                        <li class="p-1" id="pageContactUs">
+                            Contact Us
+                        </li>
+                    </ul>
+                    <div class="side-copy-right">
+                        <div class="social-icon">
+                            <i role="button" class="fa-brands fa-facebook"></i>
+                            <i role="button" class="fa-brands fa-twitter"></i>
+                            <i role="button" class="fa-solid fa-globe "></i>
+                        </div>
+                        <h5>Copyright Â© 2019 All RightsReserved.</h5>
+                    </div>
+                </div>
+            
+                <div class="logo-side bg-white py-5 px-2 d-flex flex-column justify-content-between align-items-center">
+                    <div id="mainPage" role="button">
+                        <img src="image/logo.png"  alt="">
+                    </div>
+                   
+                        <div class="open-close-icon">
+                            <i class="fa-solid fa-bars fa-3x text-black" role="button"></i>
+                            <i class="fa-solid fa-xmark fa-3x text-black d-none" role="button"></i>
+                        </div>
+                    <div class="share-details text-black d-flex flex-column ">
+                        <i role="button" class="fa-solid fa-globe p-1"></i>
+                        <i role="button" class="fa-solid fa-share-alt p-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+ <section class="main-section ">
+        <div class="container p-4">
+            <div class="row gy-4">
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden ">
+                        <img src="image/1.jpg" class="w-100 rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Koshari</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/2.jpg" class="w-100 rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Feteer Meshaltet</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/3.jpg" class="w-100 rounded-3" alt="resturant-meal">
+                        <div class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center flex-column">
+                            <h3 class="posi">Shakshuka</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/4.jpg" class="w-100  rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Shawarma</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/5.jpg" class="w-100  rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Ful Medames</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/6.jpg" class="w-100  rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Tamiya</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/7.jpg" class="w-100  rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Egyptian Fatteh</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div role="button" class="inner-data position-relative overflow-hidden">
+                        <img src="image/8.jpg" class="w-100  rounded-3" alt="resturant-meal">
+                        <div
+                            class="img-text rounded-3 position-absolute top-0 bottom-0 start-0 end-0 bg-white bg-opacity-75 d-flex align-items-center justify-content-center">
+                            <h3 class="posi">Mulukhiyah</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
 
 
-    <script src="index.js"></script>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

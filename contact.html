@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Yummy</title>
+</head>
+<body class="bg-black">
+    
+    <section class="side-nav position-absolute text-white" id="side-bar">
+        <div class="main-nav bg-info position-fixed top-0 bottom-0 d-flex">
+            <div class="side-links-container  d-flex" id="SLider-content">
+                <div class="Side-links bg-black py-3 px-2 d-flex flex-column justify-content-between ">
+                    <ul class="list-unstyled fs-3 text-white " role="button">
+                        <li class="p-1" id="pageSearch">
+                            Search
+                        </li>
+                        <li class="p-1" id="pageCategories">
+                            Categories
+                        </li>
+                        <li class="p-1"  id="pageArea">
+                            Area
+                        </li>
+                        <li class="p-1"  id="pageIngredients">
+                            Ingredients
+                        </li>
+                        <li class="p-1" id="pageContactUs">
+                            Contact Us
+                        </li>
+                    </ul>
+                    <div class="side-copy-right">
+                        <div class="social-icon">
+                            <i role="button" class="fa-brands fa-facebook"></i>
+                            <i role="button" class="fa-brands fa-twitter"></i>
+                            <i role="button" class="fa-solid fa-globe "></i>
+                        </div>
+                        <h5>Copyright Â© 2019 All RightsReserved.</h5>
+                    </div>
+                </div>
+            
+                <div class="logo-side bg-white py-5 px-2 d-flex flex-column justify-content-between align-items-center">
+                    <div id="mainPage" role="button">
+                        <img src="image/logo.png"  alt="">
+                    </div>
+                        <div class="open-close-icon">
+                            <i class="fa-solid fa-bars fa-3x text-black" role="button"></i>
+                            <i class="fa-solid fa-xmark fa-3x text-black d-none" role="button"></i>
+                        </div>
+                    <div class="share-details text-black d-flex flex-column ">
+                        <i role="button" class="fa-solid fa-globe p-1"></i>
+                        <i role="button" class="fa-solid fa-share-alt p-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section class="contact p-5 text-center text-white">
+        <div class="container p-4">
+            <div class="row p-5" id="contac">
+
+               <div class="w-50 p-2"> 
+                <input type="text" class="form-control p-3 mb-2" placeholder="Enter Your Name" id="userName">
+                <div class="p-3 fs-5 bg-opacity-50 bg-danger m-1 rounded d-none" id="userNameError">
+                    <p >Special characters and numbers not allowed</p>
+                </div>
+               </div>
+               <div class="w-50 p-2"> 
+                <input type="mail" class="form-control p-3 mb-2" placeholder="Enter Your Email" id="userEmail">
+                <div class="p-3 fs-5 bg-opacity-50 bg-danger m-1 rounded d-none" id="userEmailError">
+                    <p >Email not valid *exemple@yyy.zzz</p>
+                </div>
+               </div>
+               <div class="w-50 p-2"> 
+                <input type="number" class="form-control p-3 mb-2" placeholder="Enter Your Phone" id="userPhone">
+                <div class="p-3 fs-5 bg-opacity-50 bg-danger m-1 rounded d-none" id="userPhoneError">
+                    <p >Enter valid Phone Number</p>
+                </div>
+               </div>
+               <div class="w-50 p-2"> 
+                <input type="number" class="form-control p-3 mb-2" placeholder="Enter Your Age" id="userAge">
+                <div class="p-3 fs-5 bg-opacity-50 bg-danger m-1 rounded d-none"  id="userAgeError">
+                    <p >Enter valid age</p>
+                </div>
+               </div>
+               <div class="w-50 p-2"> 
+                <input type="Password" class="form-control p-3 mb-2" placeholder="Enter Your Password" id="userPassword">
+                <div class="p-3 fs-5 bg-opacity-50 bg-danger m-1 rounded d-none"  id="userPasswordError" >
+                    <p >Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                </div>
+               </div>
+               <div class="w-50 p-2"> 
+                <input type="Password" class="form-control p-3 mb-2" placeholder="Renter Your Password" id="userPasswordTwo">
+                <div class="p-3 fs-5 bg-opacity-50 bg-danger m-1 rounded d-none" id="userPasswordErrorTwo">
+                    <p >Enter valid repassword</p>
+                </div>
+               </div>
+
+               
+               
+               
+            </div>
+            <button class="btn btn-sm btn-outline-danger p-2 fs-3 rounded-2 opacity-50 disabled" id="submitButton">Submit</button>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
